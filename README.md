@@ -56,5 +56,4 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for team collab
   - `VITE_API_URL`: (The URL of your deployed backend + `/api`)
 - Railway will automatically run `npm run build` and serve the `dist` folder.
 
-## 📜 License
-MIT
+
