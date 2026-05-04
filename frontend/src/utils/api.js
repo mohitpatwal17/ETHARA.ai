@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://etharaai-production-2bad.up.railway.app/api'
+    baseURL: '/api'
 });
 
 // Add a request interceptor to include the token

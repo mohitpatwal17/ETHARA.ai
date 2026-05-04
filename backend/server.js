@@ -29,9 +29,12 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 app.use('/api/users', require('./routes/users'));
 
-// Basic route for testing
-app.get('/', (req, res) => {
-    res.send('Task Manager API is running...');
+// Serve static files from frontend build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Wildcard route to handle React routing
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
 // Connect to MongoDB
