@@ -53,7 +53,7 @@ router.put('/:id', auth, async (req, res) => {
         }
 
         if (req.user.role === 'admin') {
-            // Admin can update anything, but we'll focus on what's passed
+            // Admin can update anything
             task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
         } else {
             // Member can only update status if assigned to them
@@ -70,7 +70,7 @@ router.put('/:id', auth, async (req, res) => {
     }
 });
 
-// Delete task (Admin only)
+// Delete task Admin only
 router.delete('/:id', auth, isAdmin, async (req, res) => {
     try {
         const task = await Task.findById(req.params.id);

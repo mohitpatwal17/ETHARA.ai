@@ -47,7 +47,7 @@ const Login = () => {
                             <input
                                 type="email"
                                 className="w-full px-3 py-2 border rounded focus:border-blue-500 outline-none transition-all text-sm"
-                                placeholder="example@email.com"
+                                placeholder="your email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required

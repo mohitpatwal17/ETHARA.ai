@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/User');
 const { auth } = require('../middleware/auth');
 
-// Get all users (for task assignment)
+// Get all users
 router.get('/', auth, async (req, res) => {
     try {
         const users = await User.find().select('-password');

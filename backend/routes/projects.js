@@ -17,7 +17,7 @@ router.post('/', auth, isAdmin, async (req, res) => {
             title,
             description,
             creator: req.user._id,
-            members: [req.user._id] // creator is automatically a member
+            members: [req.user._id] 
         });
 
         await newProject.save();

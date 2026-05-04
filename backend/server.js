@@ -32,7 +32,7 @@ app.use('/api/users', require('./routes/users'));
 // Serve static files from frontend build
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-// Wildcard route to handle React routing
+// helper route to handle React routing
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
