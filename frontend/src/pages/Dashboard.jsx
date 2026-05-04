@@ -81,9 +81,6 @@ const Dashboard = () => {
                                 style={{ width: `${stats.total > 0 ? (stats.completed / stats.total) * 100 : 0}%` }}
                             ></div>
                         </div>
-                        <p className="text-xs text-gray-500 italic mt-4">
-                            Note: Overdue tasks are items where the due date has passed and the status is still not completed.
-                        </p>
                     </div>
                 </div>
             </div>
