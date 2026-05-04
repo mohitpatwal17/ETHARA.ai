@@ -39,5 +39,22 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application for team collab
    npm run dev
    ```
 
+## 🚀 Deployment (Railway)
+
+### 1. Backend Deployment
+- Connect your GitHub repo to Railway.
+- Create a new **Web Service** and point it to the `backend/` directory.
+- Add Environment Variables:
+  - `PORT`: 5000
+  - `MONGO_URI`: (Create a MongoDB service on Railway and use its connection string)
+  - `JWT_SECRET`: (Your secret key)
+  - `NODE_ENV`: production
+
+### 2. Frontend Deployment
+- Create another **Web Service** pointing to the `frontend/` directory.
+- Add Environment Variables:
+  - `VITE_API_URL`: (The URL of your deployed backend + `/api`)
+- Railway will automatically run `npm run build` and serve the `dist` folder.
+
 ## 📜 License
 MIT
